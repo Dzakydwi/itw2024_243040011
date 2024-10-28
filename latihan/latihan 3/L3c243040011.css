@@ -1,0 +1,33 @@
+body{
+    background-color: aqua;
+    font-family: Georgia;
+}
+h1{
+    font-family: Comic Sans MS;
+    font-size: 60px;
+    color: darkblue;
+}
+h4{
+    text-align: right;
+}
+p{
+    text-align: center;
+}
+#ya{
+    color: orange;
+}
+#yang{
+    text-decoration: none;
+    color: red;
+}
+#yang:hover{
+    color: white;
+}
+#jek:hover{
+    color: white;
+    background-color: blue;
+}
+#jek{
+    text-decoration: none;
+    font-weight: bold;
+}

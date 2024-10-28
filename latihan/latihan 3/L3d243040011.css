@@ -1,0 +1,41 @@
+body{
+    background-image: url('background.png');
+    background-repeat: repeat-x;
+    font-family: Georgia;
+}
+h1{
+    font-family: Comic Sans MS;
+    font-size: 60px;
+    color: darkblue;
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+#ya{
+    color: orange;
+}
+#yang{
+    text-decoration: none;
+    color: red;
+}
+#yang:hover{
+    color: white;
+}
+#jek:hover{
+    color: white;
+    background-color: blue;
+}
+#jek{
+    text-decoration: none;
+    font-weight: bold;
+}
+#ok{
+    text-align: center;
+}
+#ohh{
+    text-align: right;
+}
