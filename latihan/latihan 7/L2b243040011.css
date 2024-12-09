@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    background-color: rgba(0, 0, 0, 1);
+    justify-content: space-around;
+    color: rgb(255, 255, 255);
+    height: 50px;
+    align-items: center;
+}
+
+nav .header {
+    font-family: "Protest Revolution", sans-serif;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+
+/* Header */
+
+.header {
+    display: grid;
+    grid-template-areas: 
+    'hero hero feature-1'
+    'hero hero feature-2';
+    height: 60vh;
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 300px;
+    background-image: url(jaket1.2.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+}
+
+.hero > * {
+    display: none;
+}
+
+.features {
+    background-color: #000;
+    color: white;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.feature-1 {
+    grid-area: feature-1;
+    background-image: url(hoodie.3.2.jpg);
+    background-size: cover;
+}
+
+.feature-2 {
+    grid-area: feature-2;
+    background-image: url(hoodie.2.2.jpg);
+    background-size: cover;
+}
+
+.features .price {
+    font-size: 3em;
+    font-weight: 200;
+}
+
+/* Services */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.service {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3)
+}
+
+.service h3 {
+    font-size: 1.5em;
+}
+
+.service p {
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* Gallery */
+.gallery {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    margin-left: 15px;
+}
+
+.edit2 {
+    margin-left: 60%;
+}
+
+.edit4 {
+    margin-top: 300px;
+    margin-right: 500%;
+}
+
+/* Footer */
+.footer {
+    margin-top: 15px;
+    background-color: #000;
+    color: white;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Responsive Breakpoint */
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* Ukuran mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 1);
+        z-index: 1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 2;
+        transform: translateX(0);
+    }
+}
